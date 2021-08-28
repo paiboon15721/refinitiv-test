@@ -1,0 +1,6 @@
+<input [(ngModel)]="term" />
+<table>
+  <tr *ngFor="let x of xs$ | async | filter: term">
+    <td>{{ x }}</td>
+  </tr>
+</table>
