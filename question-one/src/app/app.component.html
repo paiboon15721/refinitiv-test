@@ -1,11 +1,13 @@
-<div class="container">
+<form [formGroup]="form" class="container">
   <div>
-    <input />
+    <input [formControlName]="c.input" type="number" />
   </div>
   <div>
-    <select>
-      <option value="">isPrime</option>
+    <select [formControlName]="c.option">
+      <option *ngFor="let option of options; let i = index" [value]="option">
+        {{ option }}
+      </option>
     </select>
   </div>
-  <div>true</div>
-</div>
+  <div>{{ result }}</div>
+</form>
